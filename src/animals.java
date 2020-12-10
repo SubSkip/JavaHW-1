@@ -15,15 +15,17 @@ public class animals {
         System.out.println("Name an animal:");
         String animal = userInput.nextLine();
         if (animal.equals("cat")) {
-            System.out.printf("The cat says Meow!");
+            System.out.printf("The cat says, Meow!");
         } else if (animal.equals("dog")) {
-            System.out.printf("The dog says Bark!");
+            System.out.printf("The dog says, Bark!");
         } else if (animal.equals("cow")) {
-            System.out.printf("The cow says Moo!");
+            System.out.printf("The cow says, Moo!");
         } else if (animal.equals("pig")) {
-            System.out.printf("The pig says Oink!");
+            System.out.printf("The pig says, Oink!");
         } else {
             System.out.printf("I do not recognize that animal.");
         }
+        userInput.close(); // adding this at the end will remove the "Resource leak: 'foo' is never closed"
+                           // warning
     }
 }
