@@ -8,24 +8,24 @@ import java.util.Scanner;
 //comment
 public class animals {
     // Scanner userInput = new Scanner(System.in); Can't declare the variable here
-    // and use it
+    // and use it.
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
 
         System.out.println("Name an animal:");
         String animal = userInput.nextLine();
         if (animal.equals("cat")) {
-            System.out.printf("The cat says, Meow!");
+            System.out.printf("The %s says, Meow!", animal); // Changed to use %s for input variable.
         } else if (animal.equals("dog")) {
-            System.out.printf("The dog says, Bark!");
+            System.out.printf("The %s says, Bark!", animal);
         } else if (animal.equals("cow")) {
-            System.out.printf("The cow says, Moo!");
+            System.out.printf("The %s says, Moo!", animal);
         } else if (animal.equals("pig")) {
-            System.out.printf("The pig says, Oink!");
+            System.out.printf("The %s says, Oink!", animal);
         } else {
             System.out.printf("I do not recognize that animal.");
         }
         userInput.close(); // adding this at the end will remove the "Resource leak: 'foo' is never closed"
-                           // warning
+                           // warning.
     }
 }
