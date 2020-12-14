@@ -14,6 +14,7 @@ public class animals {
 
         System.out.println("Name an animal:");
         String animal = userInput.nextLine();
+        animal = animal.toLowerCase();
         if (animal.equals("cat")) {
             System.out.printf("The %s says, Meow!", animal); // Changed to use %s for input variable.
         } else if (animal.equals("dog")) {
